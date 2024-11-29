@@ -1,0 +1,24 @@
+.gridContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-media {
+    background-color: var(--Purple-500);
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 1.5rem;
+}
+
+.social-media img {
+    width: 75%;
+    margin-top: 10px;
+}
+
+.comment {
+    font-size: .7rem;
+    color: rgba(255, 255, 255, 0.651);
+}

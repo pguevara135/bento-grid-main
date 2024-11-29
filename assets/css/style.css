@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+:root {
+    /*  Colors */
+    --Purple-100: rgb(218, 207, 252);
+    --Purple-500: rgb(118, 80, 220);
+    --Yellow-100: rgb(249, 238, 225);
+    --Yellow-500: rgb(255, 203, 107);
+    --White: rgb(255, 255, 255);
+    --Black: rgb(18, 18, 18);
+
+    /* Type */
+    --fs--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+    --fs--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+    --fs-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+    --fs-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+    --fs-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+    --fs-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+    --fs-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+    --fs-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+
+    /* Spacing */
+    --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
+    --space-2xs: clamp(0.5625rem, 0.5408rem + 0.1087vw, 0.625rem);
+    --space-xs: clamp(0.875rem, 0.8533rem + 0.1087vw, 0.9375rem);
+    --space-s: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+    --space-m: clamp(1.6875rem, 1.6223rem + 0.3261vw, 1.875rem);
+    --space-l: clamp(2.25rem, 2.163rem + 0.4348vw, 2.5rem);
+    --space-xl: clamp(3.375rem, 3.2446rem + 0.6522vw, 3.75rem);
+    --space-2xl: clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem);
+    --space-3xl: clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem);
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--White);
+    font-size: var(--fs-1);
+}
+
+.gridContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "social"
+    "account"
+    "schedule"
+    "followers"
+    "audience"
+    "posting"
+    "ai"
+    "media";
+}
+
+/* ! SOCIAL MEDIA */
+
+.social-media {
+    background-color: var(--Purple-500);
+    padding: 20px;
+    color: var(--White);
+    text-align: center;
+    text-align: center;
+    grid-area: social;
+}
+
+.social-media img {
+    width: 40%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.comment {
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.651);
+}
+
+/* ! MULTIPLE ACCOUNT */
+
+.multiple-account {
+    background-color: var(--Yellow-100);
+    font-weight: bold;
+    color: var(--Black);
+    padding: 15px;
+    grid-area: account;
+}
+
+.multiple-account img {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+/* ! CONSIST POSTING */
+
+.consistent-posting {
+    background-color: var(--Yellow-500);
+    color: var(--Black);
+    padding: 15px 15px 0 15px;
+    grid-area: posting;
+    position: relative;
+    overflow: hidden;
+}
+
+.consistent-posting img {
+    width: 100%;
+    margin-top: 10px;
+    /* position: absolute; */
+    bottom: 0;
+}
+
+/* ! SCHEDULE SOCIAL MEDIA */
+
+.schedule-social-media {
+    background-color: var(--Purple-100);
+    color: var(--Black);
+    grid-area: media;
+}
+
+/* ! FOLLOWERS */
+
+.followers {
+    background-color: var(--Purple-500);
+    grid-area: followers;
+}
+
+.followers img {
+    width: 50%;
+}
+
+/* ! AUDIENCE */
+
+.audience {
+    background-color: var(--White);
+    color: var(--Black);
+    grid-area: audience;
+}
+
+/* ! SCHEDULE */
+
+.schedule {
+    background-color: var(--Yellow-100);
+    color: var(--Black);
+    grid-area: left;
+    grid-area: schedule;
+}
+
+/* ! AI */
+
+.using-ai {
+    background-color: var(--Yellow-500);
+    color: var(--Black);
+    grid-area: left;
+    grid-area: ai;
+}
