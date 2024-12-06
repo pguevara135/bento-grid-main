@@ -37,33 +37,48 @@
     --space-xl: clamp(3.375rem, 3.2446rem + 0.6522vw, 3.75rem);
     --space-2xl: clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem);
     --space-3xl: clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem);
+
+    /*  Border Radius */
+    --rounded-m: 8px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
 
 body {
+    max-width: 100vw;
+    height: 100vh;
     font-family: "DM Sans", sans-serif;
     background-color: var(--White);
-    font-size: var(--fs-1);
+    font-size: var(--fs--2);
+    padding: 1rem;
+}
+
+.bento-item {
+    padding: var(--space-m);
+    border-radius: var(--rounded-m);
+    background-color: var(--Yellow-100);
 }
 
 .gridContent {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
-    "social"
-    "account"
-    "schedule"
-    "followers"
-    "audience"
-    "posting"
-    "ai"
-    "media";
+    "posting social social media"
+    "posting social social media"
+    "posting account schedule media"
+    "ai account schedule media"
+    "ai audience followers followers"
+    "ai audience followers followers";
+    gap: 1.2rem;
 }
 
 /* ! SOCIAL MEDIA */
 
 .social-media {
     background-color: var(--Purple-500);
-    padding: 20px;
     color: var(--White);
     text-align: center;
     text-align: center;
@@ -87,7 +102,6 @@ body {
     background-color: var(--Yellow-100);
     font-weight: bold;
     color: var(--Black);
-    padding: 15px;
     grid-area: account;
 }
 
@@ -102,16 +116,13 @@ body {
 .consistent-posting {
     background-color: var(--Yellow-500);
     color: var(--Black);
-    padding: 15px 15px 0 15px;
     grid-area: posting;
     position: relative;
-    overflow: hidden;
 }
 
 .consistent-posting img {
     width: 100%;
     margin-top: 10px;
-    /* position: absolute; */
     bottom: 0;
 }
 

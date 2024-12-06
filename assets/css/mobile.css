@@ -1,12 +1,34 @@
-.gridContent {
-    display: flex;
-    flex-direction: column;
+.bento-item {
+    padding: var(--space-3xs);
 }
 
+.gridContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "social"
+    "account"
+    "posting"
+    "media"
+    "followers"
+    "audience"
+    "schedule"
+    "ai";
+}
+
+.gridContent {
+    width: 100%;
+    height: 100vh;
+}
+
+/* Social Media */
+
 .social-media {
+    max-width: 100%;
     background-color: var(--Purple-500);
     padding: 20px;
     text-align: center;
+    grid-area: social;
 }
 
 .title {
@@ -21,4 +43,45 @@
 .comment {
     font-size: .7rem;
     color: rgba(255, 255, 255, 0.651);
+}
+
+/* Multiple Account */
+
+.multiple-account {
+    grid-area: account;
+}
+
+/* Consistent posting */
+
+.consistent-posting {
+    height: 180px;
+    grid-area: posting;
+    overflow: hidden;
+    position: relative;
+}
+
+.consistent-posting img {
+    width: 60%;
+    position: absolute;
+    bottom: -15  px;
+}
+
+.schedule-social-media {
+    grid-area: media;
+}
+
+.followers {
+    grid-area: followers;
+}
+
+.audience {
+    grid-area: audience;
+}
+
+.schedule {
+    grid-area: schedule;
+}
+
+.using-ai {
+    grid-area: ai;
 }
