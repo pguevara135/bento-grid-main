@@ -1,5 +1,11 @@
+h2 {
+    font-size: var(--fs-0);
+    font-weight: bold;
+    font-style: italic;
+}
+
 .bento-item {
-    padding: var(--space-3xs);
+    padding: var(--space-2xs);
 }
 
 .gridContent {
@@ -31,10 +37,6 @@
     grid-area: social;
 }
 
-.title {
-    font-size: 1.5rem;
-}
-
 .social-media img {
     width: 75%;
     margin-top: 10px;
@@ -54,34 +56,73 @@
 /* Consistent posting */
 
 .consistent-posting {
-    height: 180px;
+    min-height: 170px;
     grid-area: posting;
+    padding-block-end: 0;
     overflow: hidden;
-    position: relative;
+    h2 {
+        font-size: var(--fs-1);
+    }
 }
 
 .consistent-posting img {
     width: 60%;
-    position: absolute;
-    bottom: -15  px;
 }
 
 .schedule-social-media {
     grid-area: media;
+    p {
+        font-size: var(--fs--1);
+    }
 }
 
 .followers {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs);
     grid-area: followers;
+    color: var(--White);
+    h2 {
+        font-size: var(--fs-2);
+        justify-self: center;
+    }
+    img {
+        align-self: center;
+        justify-self: center;
+    }
 }
 
 .audience {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs);
     grid-area: audience;
+    h2 {
+        font-size: var(--fs-2);
+    }
+    img {
+        width: 50%;
+    }
 }
 
 .schedule {
     grid-area: schedule;
+    h2 {
+        font-size: var(--fs-1);
+    }
+    img {
+        width: 50%;
+    }
 }
 
 .using-ai {
     grid-area: ai;
+    h2 {
+        font-size: var(--fs-1);
+        margin-bottom: 1rem;
+    }
+    img {
+        width: 60%;
+    }
 }

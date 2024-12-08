@@ -42,6 +42,21 @@
     --rounded-m: 8px;
 }
 
+.purple {
+    color: var(--Purple-500);
+}
+
+.yellow {
+    color: var(--Yellow-500);
+}
+
+h2 {
+    text-wrap: balance;
+    font-weight: 500;
+    line-height: 1.1;
+    font-size: var(--fs-1);
+}
+
 img {
     display: block;
     max-width: 100%;
@@ -56,8 +71,13 @@ body {
     padding: 1rem;
 }
 
+.container {
+    max-width: 60%;
+    margin: auto;
+}
+
 .bento-item {
-    padding: var(--space-m);
+    padding: var(--space-2xs);
     border-radius: var(--rounded-m);
     background-color: var(--Yellow-100);
 }
@@ -66,10 +86,10 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
-    "posting social social media"
-    "posting social social media"
-    "posting account schedule media"
-    "ai account schedule media"
+    "schedule social social media"
+    "schedule social social media"
+    "schedule account posting media"
+    "ai account posting media"
     "ai audience followers followers"
     "ai audience followers followers";
     gap: 1.2rem;
@@ -83,6 +103,9 @@ body {
     text-align: center;
     text-align: center;
     grid-area: social;
+    h2 {
+        font-size: var(--fs-2);
+    }
 }
 
 .social-media img {
@@ -103,6 +126,10 @@ body {
     font-weight: bold;
     color: var(--Black);
     grid-area: account;
+    overflow: hidden;
+    h2 {
+        font-size: var(--fs-0);
+    }
 }
 
 .multiple-account img {
@@ -114,16 +141,18 @@ body {
 /* ! CONSIST POSTING */
 
 .consistent-posting {
+    max-height: 150px;
     background-color: var(--Yellow-500);
-    color: var(--Black);
     grid-area: posting;
-    position: relative;
-}
-
-.consistent-posting img {
-    width: 100%;
-    margin-top: 10px;
-    bottom: 0;
+    padding-block-end: 0;
+    overflow: hidden;
+    h2 {
+        font-size: var(--fs-0);
+        margin-bottom: 0.5rem;
+    }
+    img {
+        width: 100%;
+    }
 }
 
 /* ! SCHEDULE SOCIAL MEDIA */
@@ -132,13 +161,30 @@ body {
     background-color: var(--Purple-100);
     color: var(--Black);
     grid-area: media;
+    text-align: center;
+    img {
+        margin-top: var(--space-s);
+        margin-bottom: var(--space-s);
+    }
 }
 
 /* ! FOLLOWERS */
 
 .followers {
     background-color: var(--Purple-500);
+    color: var(--White);
+    display: flex;
     grid-area: followers;
+    max-height: 150px;
+    img {
+        width: 100%;
+        justify-self: center;
+    }
+    h2 {
+        font-size: var(--fs--1);
+        justify-self: center;
+        align-self: center;
+    }
 }
 
 .followers img {
@@ -151,6 +197,9 @@ body {
     background-color: var(--White);
     color: var(--Black);
     grid-area: audience;
+    p {
+        font-size: var(--fs--2);
+    }
 }
 
 /* ! SCHEDULE */
@@ -160,6 +209,9 @@ body {
     color: var(--Black);
     grid-area: left;
     grid-area: schedule;
+    h2 {
+        margin-bottom: 1rem;
+    }
 }
 
 /* ! AI */
@@ -167,6 +219,5 @@ body {
 .using-ai {
     background-color: var(--Yellow-500);
     color: var(--Black);
-    grid-area: left;
     grid-area: ai;
 }
